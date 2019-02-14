@@ -47,8 +47,8 @@ class GameWonFragment : Fragment() {
             // From GameWonFragmentDirections
             view.findNavController().navigate(R.id.action_gameWonFragment_to_gameFragment)
         }
-        // TODO (08) Add and show toast to get the GameWonFragmentArgs from the arguments Bundle
-        // "NumCorrect: ${args.numCorrect}, NumQuestions: ${args.numQuestions}"
+        val args = GameWonFragmentArgs.fromBundle(arguments)
+        Toast.makeText(context, "NumCorrect: ${args.numCorrect}, NumQuestions: ${args.numQuestions}", Toast.LENGTH_LONG).show()
         return binding.root
     }
 }
